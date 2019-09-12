@@ -1,0 +1,9 @@
+<h5>Change status</h5>
+
+<h6>Pending</h6>
+<div *ngIf="AnyPending()">
+  <div *ngFor="let item of todoItems">
+    <span *ngIf="!item.isCompleted">{{item.description}} <button (click)="Change(item)">Change</button></span>
+  </div>
+</div>
+

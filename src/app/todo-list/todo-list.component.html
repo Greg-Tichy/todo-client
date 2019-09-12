@@ -1,0 +1,22 @@
+<!-- <div>there are {{todoItems.length}} items</div> -->
+<div *ngIf="todoItems">
+  <h6>Completed</h6>
+  <div *ngIf="AnyCompleted()">
+    <div *ngFor="let item of todoItems">
+      <span *ngIf="item.isCompleted">{{item.description}}</span>
+    </div>
+  </div>
+  <div *ngIf="!AnyCompleted()">
+    none
+  </div>
+  <br><br>
+  <h6>Pending</h6>
+  <div *ngIf="AnyPending()">
+    <div *ngFor="let item of todoItems">
+      <span *ngIf="!item.isCompleted">{{item.description}}</span>
+    </div>
+  </div>
+  <div *ngIf="!AnyPending()">
+    none
+  </div>
+</div>
