@@ -16,7 +16,7 @@ export class TodoChangeComponent implements OnInit {
     return this.todoItems.find(t => !t.isCompleted);
   }
 
-  Change(item) {
+  Change(item: TodoItem) {
     console.log('change of ' + item.id);
     item.isCompleted = true;
     this.service.ChangeItem(item).subscribe(

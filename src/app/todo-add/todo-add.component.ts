@@ -23,7 +23,7 @@ export class TodoAddComponent implements OnInit {
     }
 
     const item: TodoItem = {
-      Id: 0,
+      id: 0,
       description: todoData.description,
       isCompleted: false
     };

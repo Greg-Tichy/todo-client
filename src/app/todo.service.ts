@@ -16,13 +16,13 @@ export class TodoService {
     return this.http.post('api/todo', item);
   }
 
-  public ChangeItem(item) {
+  public ChangeItem(item: TodoItem) {
     return this.http.put('api/todo/' + item.id, item);
   }
 }
 
 export interface TodoItem {
-  Id: number;
+  id: number;
   description: string;
   isCompleted: boolean;
 }
