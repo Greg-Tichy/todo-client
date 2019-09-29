@@ -8,7 +8,18 @@ import { TodoService, TodoItem } from '../todo.service';
 })
 export class TodoListComponent implements OnInit {
   todoItems: TodoItem[];
+public shallHide = true;
 
+  onMouseOver(e) {
+    this.shallHide = false;
+    e.currentTarget.style.backgroundColor = 'lightgrey';
+    e.currentTarget.style.color = 'yellow';
+  }
+  onMouseLeave(e) {
+    this.shallHide = true;
+    e.currentTarget.style.backgroundColor = null;
+    e.currentTarget.style.color = null;
+  }
   constructor(private service: TodoService) {}
 
   AnyCompleted() {

@@ -1,4 +1,13 @@
 <!-- <div>there are {{todoItems.length}} items</div> -->
+<button > It's Me!</button>
+
+<dl id="fox" (mouseover)="onMouseOver($event)"
+(mouseleave)="onMouseLeave($event)">
+  <dt>Red Fox</dt>
+  <dd id="latin" [hidden]="shallHide" >Vulpes vulpes</dd>
+</dl>
+
+
 <div *ngIf="todoItems">
   <h6>Completed</h6>
   <div *ngIf="AnyCompleted()">
