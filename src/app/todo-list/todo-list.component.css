@@ -1,0 +1,17 @@
+dl {
+  display: block;
+  width: 150px;
+  position: relative;
+  left: 200;
+  border: solid 1px solid salmon;
+}
+dl:hover::after {
+  content: "surprise, surprise";
+  color: crimson;
+  font-size: 10px;
+  transform: rotate(45deg);
+}
+dl::first-letter {
+  font-size: 150%;
+  color: coral;
+}
